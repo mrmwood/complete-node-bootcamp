@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 /////////
-// BLOCKING SYNCHRONOUS WAY
+// BLOCKING SYNCHRONOUS WAY - wait till one is done until the other can be executed
 /////////
 //create a variable which will contain the text that exists in the input.txt file
 const textIn = fs.readFileSync('./starter/txt/input.txt','utf-8');
@@ -20,7 +20,7 @@ fs.writeFileSync('./starter/txt/output.txt', textOut);
 console.log('file written');
 
 /////////
-// NON-BLOCKING ASYNCHRONOUS WAY
+// NON-BLOCKING ASYNCHRONOUS WAY - hanld many at the same time
 /////////
 //use readFile not readFileSync
 //include the call back function i.e. once it has done what it needs to do i.e. it is ready
